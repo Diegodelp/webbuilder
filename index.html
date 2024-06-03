@@ -19,7 +19,7 @@
   </body>
   <script>
     var element = document.getElementById("element").value;
-    var name = document.getElementById("name");
+    var name = document.getElementById("name").value;
     var master = document.getElementById("master_component");
 
     function addComponent(){
@@ -28,7 +28,7 @@
       new_component.style.height = "150px";
       new_component.style.backgroundColor = "green";
       new_component.style.borderRight = "1px solid black";
-      new_component.id = name.value;
+      new_component.id = name;
       master.appendChild(new_component)
       
     }
