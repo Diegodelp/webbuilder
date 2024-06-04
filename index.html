@@ -12,8 +12,10 @@
       <option value="a">a</option>
       <option value="p">p</option>
     </select>
-    <label></label>
-    <input id="name" type="text">
+    <label>Component Selector</label>
+    <select id="components">
+
+    </select>
     <button onclick="addComponent()">Add Component</button>
     <div id="master_component" style="width: 100%; height: 100%; background-color: rgb(202, 202, 202); display: flex; flex-direction: row;"></div>
   </body>
@@ -31,7 +33,12 @@
       new_component.id = id_component;
       components.push(id_component)
       master.appendChild(new_component)
-      
     }
+    components.forEach(element => {
+      var drop_elementsCreated = document.getElementById("components")
+      var new_option = document.createElement("option")
+      new_option.value = element
+      drop_elementsCreated.appendChild(new_option)      
+    });
   </script>
 </html>
