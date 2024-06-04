@@ -25,6 +25,7 @@
     var components = []
     function createDropList(){
       components.forEach(element => {
+      drop_elementsCreated.innerHTML = ""
       var drop_elementsCreated = document.getElementById("components")
       var new_option = document.createElement("option")
       new_option.textContent = element
