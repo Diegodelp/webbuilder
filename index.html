@@ -19,16 +19,17 @@
   </body>
   <script>
     var element = document.getElementById("element").value;
-    var name = document.getElementById("name").value;
     var master = document.getElementById("master_component");
-
+    var components = []
     function addComponent(){
+      var id_component = "component_" + Math.floor(Date.now() / 1000); 
       var new_component = document.createElement(element);
       new_component.style.width = "200px";
       new_component.style.height = "150px";
       new_component.style.backgroundColor = "green";
       new_component.style.borderRight = "1px solid black";
-      new_component.id = name;
+      new_component.id = id_component;
+      components.push(id_component)
       master.appendChild(new_component)
       
     }
